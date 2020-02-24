@@ -1,0 +1,120 @@
+
+ <!-- Fixed navbar -->
+
+ <nav class="navbar  navbar-fixed-top navbar-principal">
+
+    <div class="container">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+          <span class="sr-only">Toggle navigation</span>
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a class="navbar-brand" (click)="gotoHomepage()" >
+            <b>Clean-Note</b>
+        </a>
+
+      </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+
+          <div class="col-md-5 col-sm-4">         
+
+           <form class="navbar-form">
+
+              <div class="form-group" style="display:inline;">
+
+                <div class="input-group" style="display:table;">
+
+                  <input class="form-control" name="search" placeholder="Search..." autocomplete="off" type="text">
+
+                  <span class="input-group-addon" style="width:1%;">
+
+                    <span class="glyphicon glyphicon-search"></span>
+
+                  </span>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>        
+
+          <ul class="nav navbar-nav navbar-right">
+
+              <li>
+
+                  <a (click)="gotoProfile()">
+
+                      Hillary McBrewk
+
+                      <img src="assets/img/woman-1.jpg" class="img-nav">
+
+                  </a>
+
+              </li>
+
+              <li class="active"><a (click)="gotoHomepage()" ><i class="fa fa-bars"></i>&nbsp;Home</a></li>
+
+              <li><a (click)="gotoChat()"><i class="fa fa-comments"></i></a></li>
+
+              <li class="dropdown">
+
+                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  Pages 
+
+                    <span class="caret"></span>
+
+                  </a>
+
+                  <ul class="dropdown-menu">
+
+                    <li><a (click)="gotoRecoverPassword()">Recover password</a></li>
+
+                    <li><a (click)="gotoListuser()">List users</a></li>
+
+                    <li><a (click)="gotoPhotos()">Photos</a></li>
+
+                    <li><a (click)="gotoFreinds()">Friends</a></li>
+
+                    <li><a (click)="gotoUserDirectory()">User directory</a></li>
+
+                    <li><a (click)="gotoAbout()">About</a></li>
+
+                    <li><a (click)="gotoEditProfile()">Edit profile</a></li>
+
+                    <li><a (click)="gotoNotification()">Notifications</a></li>
+
+                    <li><a (click)="gotoBlankCover()">Blank cover</a></li>
+
+                    <li><a (click)="gotoRegistrationEmail()">Registration email</a></li>
+
+                    <li><a (click)="gotoGridPost()">Grid posts</a></li>
+
+                    <li><a (click)="gotoHomepage()">Error 404</a></li>
+
+                    <li><a (click)="gotoHomepage()">Error 500</a></li>
+
+                  </ul>
+
+              </li>
+
+              <li><a (click)="gotoHomepage()" class="nav-controller"><i class="fa fa-user"></i>Users</a></li>				
+
+          </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
