@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,12 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
+  @Output() menuState = new EventEmitter();
+
+  showMenu = true; /* false by default, since hidden */
+
   constructor(private router: Router) { }
+  ngOnInit() {}
 
  
- 
-  ngOnInit() {}
+  toggleMenu() { 
+      console.log("inside toggleMenu in header component");
+      this.showMenu = !this.showMenu;
+      console.log("showMenu="+this.showMenu)
+      this.menuState.emit(this.showMenu);
+   }
 
   gotoHomepage(){
     this.router.navigate(['homepage'])

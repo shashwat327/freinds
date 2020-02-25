@@ -10,13 +10,25 @@ import { Router } from '@angular/router';
 })
 export class HomepageComponent implements OnInit {
 
-  
+  subMenuState:boolean ;
+  display: boolean =true;
 
   constructor(    private router: Router,
-                  ){}
+                  ){
+                    // document.body.style.background = 'rgba(0, 0, 0, .6)';
+                    
+                  }
     
   ngOnInit() {}
     
+  
+  burgerClicked(evnt){
+    this.subMenuState = evnt;
+    console.log("inside homepage component with showMenu =", this.subMenuState);
+    this.display=this.subMenuState;
+    console.log("display="+this.display);
+  }
+
   gotoProfile(){
     this.router.navigate(['profile'])
   }

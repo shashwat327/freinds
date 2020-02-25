@@ -17,6 +17,8 @@ body{
   background: #fff;
 } */
 
+
+/*********************************************************************************/
 footer {
   position: absolute;
   bottom: 0;
@@ -302,26 +304,7 @@ footer {
   border: 4px solid rgba(255,255,255,0.3);
 }
 
-.welcome-footer {
-  width: 100%;
-  height: 60px;
-  margin-top:9px;
-  background-color: #fff;
-}
 
-.welcome-footer .container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-
-.welcome-footer a {
-  color: #3ca2e0;
-}
-
-.welcome-footer .container .text-muted {
-  margin: 1px 0;
-}
 
 .welcome-text-shadow{
   text-shadow: 0 0 3px rgba(0,0,0,0.2);

@@ -45,6 +45,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { BlankcoverComponent } from './blankcover/blankcover.component';
 import { RegistrationemailComponent } from './registrationemail/registrationemail.component';
 import { GridpostComponent } from './gridpost/gridpost.component';
+import { SidebaruserComponent } from './sidebaruser/sidebaruser.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { GridpostComponent } from './gridpost/gridpost.component';
     BlankcoverComponent,
     RegistrationemailComponent,
     GridpostComponent,
+    SidebaruserComponent,
 
   ],
   imports: [
