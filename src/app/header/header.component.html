@@ -23,11 +23,21 @@
             <b>Clean-Note</b>
         </a>
 
+        <div class=" icon-box row d-inline" >
+          <i (click)="gotoHomepage()" class="fa fa-home" aria-hidden="true"></i>
+          <i (click)="gotoFreindRequest()" class="fa fa-user-plus" aria-hidden="true"></i>`
+          <i (click)="gotoChat()" class="fa fa-comments" aria-hidden="true"></i>
+          <i  (click)="gotoNotification()" class="fa fa-bell" aria-hidden="true"></i>
+           <i (click)="gotoSearch()" class="fa fa-search" aria-hidden="true"></i>
+          
+           
+           
+        </div>
       </div>
 
       <div id="navbar" class="collapse navbar-collapse">
 
-          <div class="col-md-5 col-sm-4">         
+          <div class="col-md-3 col-sm-3  " id="search-input-box">         
 
            <form class="navbar-form">
 
@@ -51,25 +61,46 @@
 
           </div>        
 
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav   " >
 
-              <li>
+            <li class="active home"><a (click)="gotoHomepage()" ><i class="fa fa-bars"></i>&nbsp;Home</a></li>
 
+              <li class="profile-nav" >
                   <a (click)="gotoProfile()">
-
-                      Hillary McBrewk
-
-                      <img src="assets/img/woman-1.jpg" class="img-nav">
-
+                    <img src="assets/img/woman-1.jpg" class="img-nav">
+                    &nbsp;&nbsp; <span class="profile-name"> Hillary McBrewk</span> 
                   </a>
-
               </li>
 
-              <li class="active"><a (click)="gotoHomepage()" ><i class="fa fa-bars"></i>&nbsp;Home</a></li>
+              
+                 <h5 class="label-box" style="border-top: 1px solid #d9d9da;">SUGGESTED</h5>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Groups</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Pages</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Saved</a></li>
+                  
+                 <h5 class="label-box">FAVOURITE</h5>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Groups</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Pages</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Saved</a></li>
 
-              <li><a (click)="gotoChat()"><i class="fa fa-comments"></i></a></li>
+                 <h5 class="label-box">FAVOURITE</h5>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Groups</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Pages</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Saved</a></li>
 
-              <li class="dropdown">
+                 <h5 class="label-box">FAVOURITE</h5>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Groups</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Pages</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Saved</a></li>
+
+                 <h5 class="label-box">FAVOURITE</h5>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Groups</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Pages</a></li>
+                 <li class="group"><a (click)="gotoChat()"><img src="assets/img/woman-1.jpg" class="img-nav">&nbsp;&nbsp;&nbsp;Saved</a></li>
+
+              <li class="comments"><a (click)="gotoChat()"><i class="fa fa-comments  nav-icons-for-mobile"></i></a></li>
+
+              <li class="dropdown pages">
 
                   <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  Pages 
 
@@ -109,7 +140,7 @@
 
               </li>
 
-              <li><a (click)="toggleMenu()" class="nav-controller"><i class="fa fa-user"></i>Users</a></li>				
+              <li class="user d-inline"><a (click)="toggleMenu()" class="nav-controller"><i class="fa fa-user nav-icons-for-mobile"></i>Users</a></li>				
 
           </ul>
 
@@ -119,5 +150,11 @@
 
   </nav>
 
+  <!-- <div class="row d-inline menu-box" >
+    <i class="fa fa-home" aria-hidden="true"></i>
+    <i class="fa fa-user-plus" aria-hidden="true"></i>
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    <i class="fa fa-user" aria-hidden="true"></i>
+ </div> -->
 
   <app-sidebaruser *ngIf="showMenu"></app-sidebaruser>

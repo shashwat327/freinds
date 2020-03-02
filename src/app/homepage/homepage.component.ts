@@ -15,7 +15,7 @@ export class HomepageComponent implements OnInit {
 
   constructor(    private router: Router,
                   ){
-                    // document.body.style.background = 'rgba(0, 0, 0, .6)';
+                    document.body.style.background = '#f1f1f1';
                     
                   }
     

@@ -1,108 +1,8 @@
-@import url(//fonts.googleapis.com/css?family=Lato:400|Inconsolata);
 
-html {
-  position: relative;
-  min-height: 100%;
+.container{
+      /* margin-top: -32px;
+    margin-left: 103px */
 }
-
-body{
-  font-family: Lato,"Helvetica Neue",Arial,Verdana,Tahoma,"Lucida Sans",FreeSans,"Lucida Sans Unicode","Luxi Sans",sans-serif;
-  font-family: 'Roboto', sans-serif !important;
-  /* background: #f1f1f1; */
-  overflow-x: hidden;
-  margin-bottom: 60px;
-}
-
-/* body.list-users{
-  background: #fff;
-} */
-
-footer {
-  /* position: absolute; */
-  position: relative;
-  bottom: 0 !important;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-/* ====================== top navbar =============*/
-.navbar-principal {
-    background-color: #3ca2e0;
-    border-color:#3ca2e0;
-    box-shadow: 0 2px 2px -2p xrgba(0, 0, 0, .52);
-}
-
-.navbar-principal .img-logo {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-}
-
-.navbar-principal .navbar-brand,
-.navbar-principal .navbar-brand li a:visited,
-.navbar-principal .navbar-nav li a {
-  color: #fff;
-  font-weight: 500;
-}
-
-.navbar-cover .navbar-nav li a {
-  color: #66757f;
-  font-weight: 500;
-}
-
-.navbar-principal .navbar-nav .open a,
-.navbar-principal .navbar-nav .open a:hover,
-.navbar-principal .navbar-nav li a:hover, 
-.navbar-principal .navbar-nav li a:focus, 
-.navbar-principal .navbar-nav .active a, 
-.navbar-principal .navbar-nav .active a:hover {
-  color: #fff;
-  background: rgba(0, 0, 0, .2);
-}
-
-.navbar-cover .navbar-nav li a:hover{
-  background-color: #f9f9f9;
-}
-
-.navbar-principal .navbar-form .input-group input  {
-  height: 30px;
-}
-
-.navbar-principal .input-group-addon {
-  background-color: #FFFFFF;
-  border: 1px solid #E3E3E3;
-  border-left: 0px solid #E3E3E3;
-}
-
-.navbar-principal .navbar-brand:hover {
-  color: #fff;
-  font-weight: 500;
-}
-
-.navbar-principal .dropdown-menu .notification-row a{
-  color: #337ab7;
-}
-
-.navbar-principal a i { 
-  font-size: 20px;
-}
-
-.img-nav{
-  width: 25px;
-  height: 25px;
-  margin-top: -3px;
-}
-
-.form-control, .input-group-addon {
-    -webkit-transition: all 300ms linear;
-    -moz-transition: all 300ms linear;
-    -o-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear;
-}
-
 /*============== profile image and name ===============================*/
 .cover-container{
   height:300px;
@@ -551,7 +451,7 @@ footer {
   font-size: 14px;
   font-weight: bold;
   display: inline;
-  margin-top: 0;
+  margin-top: 0px;
   margin-right: 10px;
 }
 .post .post-footer .comments-list .comment .comment-heading .time {
@@ -1510,4 +1410,80 @@ a:hover, a:active, a:focus {
 
 .container-timeline{
   min-height: 490px;
+}
+
+@media only screen and (min-width: 781px)  {
+  
+}
+
+/******************************************/
+
+ 
+@media only screen and (max-width: 786px)  {
+  
+  .profile-set{
+    padding: 0 !important;
+  }
+  .cover{
+    margin-top: 25px !important;
+  }
+  .profile-nav, .panel-groups{
+    display: none;
+  }
+
+  .mobile-freind{
+    display:none;
+  }
+  .container
+  {
+    
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+ 
+  .inner-second-container{
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+}
+
+/***********************************************************/
+
+.facebook-box{
+
+  background-color: white;
+  border-width: 1px solid #f9f9f9;
+  margin-bottom: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -14px !important;
+  padding: 0 !important;
+} 
+
+.facebook-box .fb-such-box a i b{
+
+font-family: Cambria; 
+font-weight: normal !important;
+}
+
+.fb-sub-box{
+  padding: 10px 20px;
+  border-top: 1px solid #d9d9da;;
+}
+
+.fa-home, .fa-map-marker, .fa-heart, .fa-ellipsis-h {
+  color:grey;
+  font-size: 16px;
+}
+.fa-map-marker{
+  padding-left:4px;
+}
+
+
+/********************************************************************/
+
+@media only screen and (max-width: 1400px) and (min-width: 992) {
+.facebook-box{
+  margin-left: 47px !important;
+}
 }

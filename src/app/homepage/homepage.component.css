@@ -1,97 +1,13 @@
-
-/*******************footer*************************/
-
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  /* background-color: #f5f5f5; */
-  background-color: #f5f5f5 !important;
+.container{
+  margin-top:90px;
 }
- 
-/* ====================== top navbar =============*/
-.navbar-principal {
-    background-color: #3ca2e0;
-    border-color:#3ca2e0;
-    box-shadow: 0 2px 2px -2p xrgba(0, 0, 0, .52);
-}
-
-.navbar-principal .img-logo {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-}
-
-.navbar-principal .navbar-brand,
-.navbar-principal .navbar-brand li a:visited,
-.navbar-principal .navbar-nav li a {
-  color: #fff;
-  font-weight: 500;
-}
-
-.navbar-cover .navbar-nav li a {
-  color: #66757f;
-  font-weight: 500;
-}
-
-.navbar-principal .navbar-nav .open a,
-.navbar-principal .navbar-nav .open a:hover,
-.navbar-principal .navbar-nav li a:hover, 
-.navbar-principal .navbar-nav li a:focus, 
-.navbar-principal .navbar-nav .active a, 
-.navbar-principal .navbar-nav .active a:hover {
-  color: #fff;
-  background: rgba(0, 0, 0, .2);
-}
-
-.navbar-cover .navbar-nav li a:hover{
-  background-color: #f9f9f9;
-}
-
-.navbar-principal .navbar-form .input-group input  {
-  height: 30px;
-}
-
-.navbar-principal .input-group-addon {
-  background-color: #FFFFFF;
-  border: 1px solid #E3E3E3;
-  border-left: 0px solid #E3E3E3;
-}
-
-.navbar-principal .navbar-brand:hover {
-  color: #fff;
-  font-weight: 500;
-}
-
-.navbar-principal .dropdown-menu .notification-row a{
-  color: #337ab7;
-}
-
-.navbar-principal a i { 
-  font-size: 20px;
-}
-
-.img-nav{
-  width: 25px;
-  height: 25px;
-  margin-top: -3px;
-}
-
-.form-control, .input-group-addon {
-    -webkit-transition: all 300ms linear;
-    -moz-transition: all 300ms linear;
-    -o-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear;
-}
-
 /*============== profile image and name ===============================*/
 .cover-container{
   height:300px;
   background:#3ca2e0;
   margin-top:53px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .color-container{
@@ -1042,7 +958,7 @@ div.about-tab div.about-tab-content:not(.active){
 /*======== Profile page ================================*/
 
 .profile-nav, .profile-info{
-    margin-top:30px;   
+    margin-top:-12px;   
 }
 
 .profile-nav .user-heading {
@@ -1494,4 +1410,30 @@ a:hover, a:active, a:focus {
 
 .container-timeline{
   min-height: 490px;
+}
+
+/********************************************/
+@media only screen and (max-width: 992px){
+
+.cover-container, .freind-activity, .people-you-may-know{
+  display: none;
+}
+.nav-icons-for-mobile{
+  margin-left: 0px !important;
+  background-color: black !important;
+}
+
+.container, .profile-info{
+  padding: 0 !important;
+}
+
+ .panel{
+  margin-top: 70px !important;
+  margin-bottom: -44px !important;
+}
+
+.container{
+  margin-top: 30px !important;
+}
+
 }

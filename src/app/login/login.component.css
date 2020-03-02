@@ -1,10 +1,41 @@
-/*==================== Welcome page ==================*/
-.logo-home{
-  border: 10px solid rgba(255,255,255,0.3);
-  border-radius: 45%;
-  width: 200px;
-  height: 200px;
+
+.logo{
+  
+  width: 140px;
+  height: 140px;
 }
+
+.nopadding{
+  padding-left: 0 !important;
+}
+
+
+mat-form-field{
+
+  /* background-color: white; */
+  height: 50px;   
+  /* border-bottom: 1px solid white; */
+  border-radius: .25rem;  
+  width:130px;
+  width: 100%; 
+  color: white !important;
+}
+mat-form-field input{
+color:white !important; 
+padding-top: 0 !important;
+border-bottom: 1px solid white !important;
+top:0 !important;
+}
+mat-datepicker-toggle{
+z-index: 5;
+border-bottom: 1px solid white !important;
+color: white !important;
+}
+mat-datepicker{
+  color: white !important;
+}
+/*==================== Welcome page ==================*/
+
 .welcome-page{
 background: #fff;
 }
@@ -58,7 +89,7 @@ height: 50px;
 }
 
 .login-page .form-content .input-underline {
-  background: #3ca2e0;
+  background: #3ca2e0 !important;
   border: none;
   box-shadow: none;
   border-bottom: 2px solid rgba(255,255,255,.4);
@@ -102,6 +133,7 @@ color: rgba(255,255,255,1);
 .login-page input[type='text']::-webkit-input-placeholder, 
 .login-page input[type='password']::-webkit-input-placeholder { 
   color:    #fff;
+  
 }
 
 .login-page input[type='text']:-moz-placeholder, 

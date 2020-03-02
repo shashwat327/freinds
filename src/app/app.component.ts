@@ -8,7 +8,7 @@ import { Component, ElementRef } from '@angular/core';
 export class AppComponent {
  constructor(private elementRef: ElementRef){}
 
-//  ngAfterViewInit(){
-//   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "white";
-// }
+ ngAfterViewInit(){
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "#f1f1f1";
+}
 }

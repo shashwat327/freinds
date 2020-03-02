@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,18 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
+  innerWidth: number;
 
   constructor( private router:Router) { }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.innerWidth = window.innerWidth;
+    console.log("width="+this.innerWidth);
   }
-  gotoProfile(){
-    this.router.navigate(['profile'])
-  }
-  gotoHomepage(){
-    this.router.navigate(['homepage'])
-  }
-  gotoChat(){
-    this.router.navigate(['chat'])
+
+  gotoMobOrDesktop()
+  {
+    if(this.innerWidth < 992)
+    {
+    this.router.navigate(['mobile_chat']);
+    }
+    else{
+      
+    }
   }
 }

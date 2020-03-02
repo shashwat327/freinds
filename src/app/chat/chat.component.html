@@ -27,7 +27,7 @@
   
                     <li class="active bounceInDown">
   
-                      <a href="https://www.bootdey.com/template_demo/clean-note/messages.html#" class="clearfix">
+                      <a (click)="gotoMobOrDesktop()" class="clearfix">
   
                         <img src="assets/img/guy-2.jpg" alt="" class="img-circle">
   
@@ -209,7 +209,7 @@
   
               <!-- selected chat content -->
   
-              <div class="col-md-8 bg-white ">
+              <div class="col-md-8 bg-white desktop-chat">
   
                 <div class="chat-message">
   
@@ -441,7 +441,10 @@
   
                 </div><!-- end add post form-->           
   
-              </div><!-- selected chat content -->        
+              </div>
+              
+              
+              <!-- selected chat content -->        
   
             </div><!-- end chat content -->
   
@@ -451,9 +454,7 @@
   
       </div>
   
-      
-  
-<!-- <app-sidebaruser></app-sidebaruser> -->
+    
   
   
 <app-footer></app-footer>

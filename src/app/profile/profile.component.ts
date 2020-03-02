@@ -27,7 +27,8 @@ gotoChat(){
 
 gotoAbout()
 {
-  this.router.navigate(['about'])
+  this.router.navigate(['about']); 
+  console
 }
 
 gotoFreinds(){

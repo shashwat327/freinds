@@ -46,6 +46,14 @@ import { BlankcoverComponent } from './blankcover/blankcover.component';
 import { RegistrationemailComponent } from './registrationemail/registrationemail.component';
 import { GridpostComponent } from './gridpost/gridpost.component';
 import { SidebaruserComponent } from './sidebaruser/sidebaruser.component';
+import { MobilechatComponent } from './mobilechat/mobilechat.component';
+import { ProfilecoverComponent } from './profilecover/profilecover.component';
+import { FreindrequestComponent } from './freindrequest/freindrequest.component';
+import { AddfreindComponent } from './addfreind/addfreind.component';
+import { PostpageComponent } from './postpage/postpage.component';
+import { SearchComponent } from './search/search.component';
+import { AddfreindpageComponent } from './addfreindpage/addfreindpage.component';
+import { MyfreindpageComponent } from './myfreindpage/myfreindpage.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +76,14 @@ import { SidebaruserComponent } from './sidebaruser/sidebaruser.component';
     RegistrationemailComponent,
     GridpostComponent,
     SidebaruserComponent,
+    MobilechatComponent,
+    ProfilecoverComponent,
+    FreindrequestComponent,
+    AddfreindComponent,
+    PostpageComponent,
+    SearchComponent,
+    AddfreindpageComponent,
+    MyfreindpageComponent,
 
   ],
   imports: [

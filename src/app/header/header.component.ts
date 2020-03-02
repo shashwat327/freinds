@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Output() menuState = new EventEmitter();
 
-  showMenu = true; /* false by default, since hidden */
+  showMenu = false; /* false by default, since hidden */
 
   constructor(private router: Router) { }
   ngOnInit() {}
@@ -64,4 +64,11 @@ export class HeaderComponent implements OnInit {
   gotoGridPost(){
     this.router.navigate(['grid_post']);
   }
+  gotoFreindRequest(){
+    this.router.navigate(['freind_request']);
+  }
+  gotoSearch(){
+    this.router.navigate(['search']);
+  }
+  
 }

@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SidebaruserComponent implements OnInit {
   @Input() subMenuState;
   // opened: boolean;
-  // showMenu = true;
+  showMenu = false;
   // showMenu : boolean;
   constructor() { }
 
@@ -16,13 +16,13 @@ export class SidebaruserComponent implements OnInit {
   }
 
 
-  // toggleMenu() {
-  //     this.showMenu = !this.showMenu;
-  //  }
+  toggleMenu() {
+      this.showMenu = !this.showMenu;
+   }
  
 
-  ngOnChanges(){
-    console.log("inside ngOnChanges with subMenuState in sidebaruser component: ",this.subMenuState );
-    // this.showMenu = this.subMenuState;
-  }
+  // ngOnChanges(){
+  //   console.log("inside ngOnChanges with subMenuState in sidebaruser component: ",this.subMenuState );
+  //   this.showMenu = this.subMenuState;
+  // }
 }

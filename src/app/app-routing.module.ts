@@ -16,6 +16,11 @@ import { NotificationComponent } from './notification/notification.component';
 import { BlankcoverComponent } from './blankcover/blankcover.component';
 import { GridpostComponent } from './gridpost/gridpost.component';
 import { RegistrationemailComponent } from './registrationemail/registrationemail.component';
+import { MobilechatComponent } from './mobilechat/mobilechat.component';
+import { FreindrequestComponent } from './freindrequest/freindrequest.component';
+import { SearchComponent } from './search/search.component';
+import { AddfreindpageComponent } from './addfreindpage/addfreindpage.component';
+import { AddfreindComponent } from './addfreind/addfreind.component';
 
 
 const routes: Routes = [
@@ -116,6 +121,37 @@ const routes: Routes = [
     component: GridpostComponent,
     children: []
   },
+  {
+    path: 'mobile_chat',
+    pathMatch: 'full',
+    component: MobilechatComponent,
+    children: []
+  },
+  {
+    path: 'freind_request',
+    pathMatch: 'full',
+    component: FreindrequestComponent,
+    children: []
+  },
+  {
+    path: 'search',
+    pathMatch: 'full',
+    component: SearchComponent,
+    children: []
+  },
+  {
+    path: 'notification',
+    pathMatch: 'full',
+    component: NotificationComponent,
+    children: []
+  },
+  {
+    path: 'add_freind',
+    pathMatch: 'full',
+    component: AddfreindComponent,
+    children: []
+  },
+  
   
  
     
