@@ -34,6 +34,31 @@ color: white !important;
 mat-datepicker{
   color: white !important;
 }
+::ng-deep .mat-form-field-placeholder{
+
+  color:red !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-placeholder{
+
+  color:green !important;
+  background-color: violet;
+}
+::ng-deep .mat-form-field-underline .mat-form-field-ripple{
+
+  background-color:none;
+  color:none;
+}
+
+::ng-deep .mat-form-field-underline{
+
+  background-color:none;
+  color:none;
+}
+
+::ng-deep .mat-form-field-label{
+  color:white !important;
+}
 /*==================== Welcome page ==================*/
 
 .welcome-page{
@@ -99,6 +124,7 @@ height: 50px;
 
 .login-page .form-content .input-underline:focus {
   border-bottom: 2px solid #fff;
+  background-color: #3ca2e0;
 }
 
 .login-page .footer-links a{

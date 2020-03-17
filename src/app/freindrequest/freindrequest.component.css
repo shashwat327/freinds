@@ -2,12 +2,14 @@
 
 .freind-request{
     background-color: white;
-    margin-top: 50px !important;
+    margin-top: 52px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     
 }
-
+::ng-deep  .eliminate-margin{ 
+    margin-right: 0 !important;
+}
 
 h3{
     padding: 20px 20px;
@@ -138,5 +140,10 @@ h3{
 /****************************************************************/
 
 .people-you-know-box{
+    background-color: white !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.super-box{
     background-color: white;
 }

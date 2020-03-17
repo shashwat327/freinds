@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InputTextModule} from 'primeng/inputtext';
@@ -54,6 +55,10 @@ import { PostpageComponent } from './postpage/postpage.component';
 import { SearchComponent } from './search/search.component';
 import { AddfreindpageComponent } from './addfreindpage/addfreindpage.component';
 import { MyfreindpageComponent } from './myfreindpage/myfreindpage.component';
+import { FreindprofileComponent } from './freindprofile/freindprofile.component';
+import { StrangerprofileComponent } from './strangerprofile/strangerprofile.component';
+import { SettingComponent } from './setting/setting.component';
+import { SinglepostComponent } from './singlepost/singlepost.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +89,10 @@ import { MyfreindpageComponent } from './myfreindpage/myfreindpage.component';
     SearchComponent,
     AddfreindpageComponent,
     MyfreindpageComponent,
+    FreindprofileComponent,
+    StrangerprofileComponent,
+    SettingComponent,
+    SinglepostComponent,
 
   ],
   imports: [
@@ -96,7 +105,7 @@ import { MyfreindpageComponent } from './myfreindpage/myfreindpage.component';
     AngularFirestoreModule,  AngularFireStorageModule,
     OwlDateTimeModule, OwlNativeDateTimeModule,  NgxUiLoaderModule,
     MatDatepickerModule, MatNativeDateModule, NgMultiSelectDropDownModule.forRoot(),
-    NgbModule, NgImageSliderModule, AngularFireAuthModule, 
+    NgbModule, NgImageSliderModule, AngularFireAuthModule, HttpClientModule
    
   ],
   providers: [NewsService,AngularFireAuth],

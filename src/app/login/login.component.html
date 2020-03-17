@@ -1,3 +1,4 @@
+<ngx-ui-loader></ngx-ui-loader>
 <div class="row row-welcome">
 
   <div class="login-page">
@@ -10,25 +11,26 @@
 
         <h1>FreindBook</h1> 
 
-        <form role="form" class="frm "  *ngIf="show"> 
+        <form [formGroup]="Loginform" (ngSubmit)="LoginSubmitform(Loginform.value)" role="form" class="frm "  *ngIf="show"> 
 
           <div class="form-content"> 
 
             <div class="form-group"> 
 
-              <input type="text" class="form-control input-underline input-lg" placeholder="Email"> 
+              <input [formControlName]="'loginemail'" name="loginemail" type="text" class="form-control input-underline input-lg" placeholder="Email"> 
 
             </div> 
 
             <div class="form-group"> 
 
-              <input type="text" class="form-control input-underline input-lg" placeholder="Password"> 
+              <input [formControlName]="'loginpassword'" name="loginpassword" type="text" class="form-control input-underline input-lg" placeholder="Password"> 
 
             </div> 
 
           </div> 
 
-          <a (click)="gotoHomepage()" class="btn btn-info btn-lg">Log in</a>
+          <!-- <a (click)="gotoHomepage()" class="btn btn-info btn-lg">Log in</a> -->
+          <button type="submit" class="btn btn-info btn-lg">Log in</button>
 
           <a (click)=" gotoRegisterForm()"  class="btn btn-info btn-lg btn-frm">Register Here</a>
 
@@ -36,64 +38,69 @@
 
 
 
-        <form role="form" class="frm animated fadeInRight" *ngIf="display"> 
+        <form [formGroup]="Registerform" (ngSubmit)="RegisterSubmitform(Registerform.value)" role="form" class="frm animated fadeInRight" *ngIf="display"> 
 
           <div class="form-content"> 
 
             <div class="form-group col-md-6 nopadding"> 
 
-              <input type="text" class="form-control input-underline input-lg" placeholder="FirstName"> 
+              <input [formControlName]="'firstname'" name="firstname" type="text" class="form-control input-underline input-lg" placeholder="FirstName"> 
 
             </div> 
 
             <div class="form-group col-md-6 nopadding"> 
 
-              <input type="text" class="form-control input-underline input-lg" placeholder="LastName"> 
+              <input [formControlName]="'lastname'" name="lastname" type="text" class="form-control input-underline input-lg" placeholder="LastName"> 
 
             </div>  
 
             <div class="form-group col-md-6 nopadding"> 
 
-              <input type="text" class="form-control input-underline input-lg" placeholder="Mobile"> 
+              <input [formControlName]="'mobile'" name="mobile" type="text" class="form-control input-underline input-lg" placeholder="Mobile"> 
 
             </div> 
 
             <div class="form-group col-md-6 nopadding"> 
 
-              <input type="text" class="form-control input-underline input-lg" placeholder="Email"> 
+              <input [formControlName]="'email'" name="email" type="text" class="form-control input-underline input-lg" placeholder="Email"> 
 
             </div>
 
             <div class="form-group col-md-6 nopadding "> 
 
-              <input type="text" class="form-control input-underline input-lg " placeholder="Password"> 
+              <input [formControlName]="'password1'" name="password1" type="text" class="form-control input-underline input-lg " placeholder="Password"> 
 
             </div> 
 
-            <div class="form-group col-md-6 nopadding "> 
+            <div class="form-group col-md-6 nopadding"> 
 
-              <input type="password" class="form-control input-underline input-lg " placeholder="Confirm Password"> 
+              <input [formControlName]="'password2'" name="password2" type="text" class="form-control input-underline input-lg " placeholder="Confirm Password"> 
             </div> 
 
-            <!-- <div class="form-group col-md-6 nopadding ">
+            <div class="form-group col-md-6 nopadding ">
               <mat-form-field  >
-                <input  [formControlName]="'date'" name="date" matInput [matDatepicker]="picker" placeholder="Choose a date" style="color: white;" >
+                <input  [formControlName]="'birthdate'" name="birthdate" matInput [matDatepicker]="picker" placeholder="Choose a date"  >
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
             </div> 
 
-            <div class="form-group col-md-12 nopadding "> 
+            <div class="form-group col-md-6 nopadding d-flex"> 
 
-              <label>Gender : </label>
+              <div class="nopadding">
+                <h6> Gender : </h6>
+              </div>
+
+              <div class="d-flex">
               <input [formControlName]="'gender'" name="gender" class="form-check-input" type="radio" name="gender" value="male">
-              <span class="form-check-label"> Male </span>
+              <h6 class="form-check-label"> Male </h6>
+             </div>
 
             <label class="form-check form-check-inline mt-2">
               <input [formControlName]="'gender'" name="gender" class="form-check-input" type="radio" name="gender" value="female">
-              <span class="form-check-label"> Female</span>
+              <h6 class="form-check-label"> Female</h6>
             </label>
-            </div>  -->
+            </div> 
 
           </div> 
 
@@ -121,15 +128,15 @@
 
           </p><div class="footer-links">
 
-            <a href="https://www.bootdey.com/template_demo/clean-note/index.html#">Terms of Use</a> | 
+            <a    >Terms of Use</a> | 
 
-            <a href="https://www.bootdey.com/template_demo/clean-note/index.html#">Privacy Policy</a> | 
+            <a    >Privacy Policy</a> | 
 
-            <a href="https://www.bootdey.com/template_demo/clean-note/index.html#">Developers</a> | 
+            <a    >Developers</a> | 
 
-            <a href="https://www.bootdey.com/template_demo/clean-note/index.html#">Contact</a> | 
+            <a    >Contact</a> | 
 
-            <a href="https://www.bootdey.com/template_demo/clean-note/index.html#">About</a>
+            <a    >About</a>
 
           </div>   
 

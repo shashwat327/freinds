@@ -70,5 +70,7 @@ export class HeaderComponent implements OnInit {
   gotoSearch(){
     this.router.navigate(['search']);
   }
-  
+  gotoSettings(){
+    this.router.navigate(['setting']);
+  }
 }

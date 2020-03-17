@@ -21,4 +21,7 @@ export class FreindsComponent implements OnInit {
   gotoProfile(){
     this.router.navigate(['profile']);
   }
+  gotoFreindProfile(){
+    this.router.navigate(['freind_profile']);
+  }
 }

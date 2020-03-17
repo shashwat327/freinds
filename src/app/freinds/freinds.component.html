@@ -1,19 +1,120 @@
 <app-header></app-header>
 
-<app-profilecover></app-profilecover>
+<div class="container  first-container" >
+  
+    <div class="col-md-12 no-paddin-xs">
+
+          <div class="row"></div>
+          <div >
+            <div class="row  page-content  ">
+                <div class="col-md-10 ">
+                  <div class="row">
+                    <div class=" profile-set">
+                      <div class="cover profile">
+                        <div class="wrapper">
+                          <div class=" col-md-12 image nopadding">
+                            <img src="assets/img/profile.jpg" class="show-in-modal" alt="people">
+                          </div>
+                         
+                        </div>
+                        <div class="cover-info">
+                          <div class="avatar">
+                            <img src="assets/img/guy-3.jpg" alt="people">
+                          </div>
+                          <div class="name"><a >John Breakgrow jr.</a></div>
+                          <ul class="cover-nav">
+                            <!-- <li class="active"><a ><i class="fa fa-fw fa-bars"></i> Profile</a></li> -->
+                            <li ><a  (click)="gotoAbout()"><i class="glyphicon glyphicon-user"></i> About</a></li>
+                            <li ><a  (click)="gotoFreinds()"><i class="fa fa-fw fa-users" class="listClassss"></i> Friends</a></li>
+                            <li ><a  (click)="gotoPhotos"><i class="fa fa-fw fa-image"  class="listClassss"></i> Photos</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-md-22 hidden">
+                      <div class="cover profile">
+                        <div class="wrapper">
+                          <div class="image">
+                            <img src="assets/img/profile-cover.jpg" class="show-in-modal" alt="people">
+                          </div>
+                          <ul class="friends mobile-freind">
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/guy-6.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/woman-3.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/guy-2.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/guy-9.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/woman-9.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/guy-4.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/guy-1.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.bootdey.com/template_demo/dayday/profile.html#">
+                                <img src="assets/img/woman-4.jpg" alt="people" class="img-responsive">
+                              </a>
+                            </li>
+                            <li><a href="https://www.bootdey.com/template_demo/dayday/profile.html#" class="group"><i class="fa fa-group"></i></a></li>
+                          </ul>
+                        </div>
+                        <div class="cover-info">
+                          <div class="avatar">
+                            <img src="assets/img/guy-3.jpg" alt="people">
+                          </div>
+                          <div class="name"><a href="https://www.bootdey.com/template_demo/dayday/profile.html#">John Breakgrow jr.</a></div>
+                          <ul class="cover-nav">
+                            <li class="active"><a (click)="gotoProfile()"><i class="fa fa-fw fa-bars"></i> Profile</a></li>
+                            <li (click)="gotoAbout()"><a ><i class="fa fa-fw fa-user"></i> About</a></li>
+                            <li><a (click)="gotoFreinds()"><i class="fa fa-fw fa-users"></i> Friends</a></li>
+                            <li><a (click)="gotoPhotos()"><i class="fa fa-fw fa-image"></i> Photos</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             
+        </div> 
+          </div>
+        </div>
+</div>  
+
 
 
 <div class="freind-request ">
     <div class="row  row-box ">
          <h3>FREINDS</h3>
         <div class="super-box ">
-            <div class="main-box col-sm-12  col-md-6">
+            <div (click)="gotoFreindProfile()"  class="main-box col-sm-12  col-md-6">
                 <div class="box  ">
-                    <img  src="assets/img/guy-2.jpg">
+                    <img (click)="gotoFreindProfile()"  src="assets/img/guy-2.jpg">
                 </div>
 
                 <div class="box2 ">
-                    <h5>Shashwat Khobragade</h5>
+                    <h5 (click)="gotoFreindProfile()" >Shashwat Khobragade</h5>
                     <h6>Works at Studying</h6>
 
                     <div class="button-box">

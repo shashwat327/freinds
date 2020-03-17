@@ -15,4 +15,8 @@ export class FreindrequestComponent implements OnInit {
   gotoAddFreindPage(){
     this.router.navigate(['add_freind']);
   }
+
+  gotoStrangerProfile(){
+    this.router.navigate(['stranger_profile'])
+  }
 }

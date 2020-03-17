@@ -1,0 +1,33 @@
+.container{
+    margin-top: 20px;
+}
+
+ul{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    border-bottom: none !important;
+}
+
+li{
+    border-bottom: 1px solid grey;
+    border-collapse: collapse;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+    
+}
+li a{
+    border-radius: 0;
+    cursor: pointer;
+}
+.fa-arrow-left{
+    font-size: 20px;
+    padding: 10px 0px;
+    
+}
+
+.arrow{
+    width:100px;
+    color: black;
+}

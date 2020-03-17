@@ -1,4 +1,25 @@
-
+.request-box{
+  background-color: white;
+  padding: 10px;
+  margin-top: -15px !important;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+.btn{
+  background-color: #3ca2e0;
+  padding: 5px 10px;
+  border:none;
+  font-size: 12;
+}
+.btn1{
+  background-color: #3ca2e0;
+  margin-right: 20px;
+  color: white;
+}
+.btn2{
+  background-color: white;
+  border: 1px solid grey;
+}
 /********************************************************************/
 .nopadding{
     padding: 0 !important;
@@ -168,6 +189,9 @@
     .first-container{
       margin-top: -18px;
     }
+    .request-box{
+      margin-left: 0 !important;
+    }
     .first-container, .col-md-4 {
       padding: 0 !important;
      }
@@ -241,6 +265,9 @@
     .first-container, .col-md-4 {
       padding: 0 !important;
      }
+     .request-box{
+      margin-left: 0 !important;
+    }
      .first-container{
       margin-top: -22px;
     }
@@ -316,6 +343,9 @@
     .first-container, .col-md-4 {
       padding: 0 !important;
      }
+     .request-box{
+      margin-left: 0 !important;
+    }
      .first-container{
       margin-top: -22px;
     }

@@ -1,0 +1,143 @@
+
+
+<div class="container">
+  
+        <div class="row">
+           
+            <div class="col-md-3">
+
+                <a (click)="goBack()" class="arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Back</a>
+                <ul class="nav nav-pills nav-stacked admin-menu">
+                    <li [class.active]="state1 === 'test1'"><a (click)="gotoPersonalInfo()" data-target-id="profile"><i class="glyphicon glyphicon-user"></i>Personal Information</a></li>
+                    <li [class.active]="state2 === 'test2'"><a (click)="gotoChangePassword()" data-target-id="change-password"><i class="glyphicon glyphicon-lock"></i>Change Password </a></li>
+                    <li [class.active]="state3 === 'test3'"><a (click)="gotoSecurity()" data-target-id="settings"><i class="glyphicon glyphicon-cog"></i>Privacy</a></li>
+                    <li [class.active]="state4 === 'test4'"><a (click)="gotoLogout()" class="logout"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-9  admin-content" id="profile" *ngIf="personalInfo">
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Name</h3>
+                    </div>
+                    <div class="panel-body">
+                        Ashish Patel
+                    </div>
+                </div>
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Email Address</h3>
+                    </div>
+                    <div class="panel-body">
+                        ashishpatel0720@gmail.com
+                    </div>
+                </div>
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Phone Number </h3>
+
+                    </div>
+                    <div class="panel-body">
+                        4 days Ago
+                    </div>
+                </div>
+
+            </div>
+
+   <div class="col-md-9  admin-content" id="settings" *ngIf="Security">
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Notification</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="label label-success">allowed</div>
+                    </div>
+                </div>
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Newsletter</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="badge">Monthly</div>
+                    </div>
+                </div>
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Admin</h3>
+
+                    </div>
+                    <div class="panel-body">
+                         <div class="label label-success">yes</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-9  admin-content" id="change-password" *ngIf="changePassword">
+                <form action="/password" method="post">
+
+           
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><label for="new_password" class="control-label panel-title">New Password</label></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" name="password" id="new_password" >
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+             
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><label for="confirm_password" class="control-label panel-title">Confirm password</label></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" name="password_confirmation" id="confirm_password" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+           
+                    <div class="panel panel-info border" style="margin: 1em;">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="pull-left">
+                                    <input type="submit" class="form-control btn btn-primary" name="submit" id="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col-md-9  admin-content" id="settings"></div>
+
+            <div class="col-md-9  admin-content" id="logout" *ngIf="Logout">
+                <div class="panel panel-info" style="margin: 1em;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Confirm Logout</h3>
+                    </div>
+                    <div class="panel-body">
+                        Do you really want to logout ?  
+                        <a  href="#" class="label label-danger"
+                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            <span >   Yes   </span>
+                        </a>    
+                        <a href="/account" class="label label-success"> <span >  No   </span></a>
+                    </div>
+                    <form id="logout-form" action="#" method="POST" style="display: none;">
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>

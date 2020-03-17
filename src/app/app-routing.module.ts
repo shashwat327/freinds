@@ -21,6 +21,9 @@ import { FreindrequestComponent } from './freindrequest/freindrequest.component'
 import { SearchComponent } from './search/search.component';
 import { AddfreindpageComponent } from './addfreindpage/addfreindpage.component';
 import { AddfreindComponent } from './addfreind/addfreind.component';
+import { FreindprofileComponent } from './freindprofile/freindprofile.component';
+import { StrangerprofileComponent } from './strangerprofile/strangerprofile.component';
+import { SettingComponent } from './setting/setting.component';
 
 
 const routes: Routes = [
@@ -151,7 +154,25 @@ const routes: Routes = [
     component: AddfreindComponent,
     children: []
   },
-  
+  {
+    path: 'freind_profile',
+    pathMatch: 'full',
+    component: FreindprofileComponent,
+    children: []
+  },
+  {
+    path: 'stranger_profile',
+    pathMatch: 'full',
+    component: StrangerprofileComponent,
+    children: []
+  },
+  {
+    path: 'setting',
+    pathMatch: 'full',
+    component: SettingComponent,
+    children: []
+  },
+ 
   
  
     

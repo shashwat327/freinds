@@ -12,11 +12,12 @@ export class HomepageComponent implements OnInit {
 
   subMenuState:boolean ;
   display: boolean =true;
+  ReplyBoxShow:boolean=false;
+  ShowReply:boolean=false;
 
   constructor(    private router: Router,
                   ){
                     document.body.style.background = '#f1f1f1';
-                    
                   }
     
   ngOnInit() {}
@@ -36,6 +37,12 @@ export class HomepageComponent implements OnInit {
   {
     this.router.navigate(['chat'])
   }
- 
+ gotoReplyBox(){
+   this.ReplyBoxShow = ! this.ReplyBoxShow
+ }
+ gotoShowReply(){
+   this.ShowReply = true;
+   this.ReplyBoxShow = false;
+ }
   }
 
