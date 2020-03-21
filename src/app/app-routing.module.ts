@@ -24,6 +24,7 @@ import { AddfreindComponent } from './addfreind/addfreind.component';
 import { FreindprofileComponent } from './freindprofile/freindprofile.component';
 import { StrangerprofileComponent } from './strangerprofile/strangerprofile.component';
 import { SettingComponent } from './setting/setting.component';
+import { SinglepostComponent } from './singlepost/singlepost.component';
 
 
 const routes: Routes = [
@@ -170,6 +171,12 @@ const routes: Routes = [
     path: 'setting',
     pathMatch: 'full',
     component: SettingComponent,
+    children: []
+  },
+  {
+    path: 'post',
+    pathMatch: 'full',
+    component: SinglepostComponent,
     children: []
   },
  

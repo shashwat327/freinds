@@ -36,7 +36,6 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FreindsComponent } from './freinds/freinds.component';
 import { ChatComponent } from './chat/chat.component';
-import { NewsService } from './shared/news.service';
 import { PhotosComponent } from './photos/photos.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { RecoverpasswordComponent } from './recoverpassword/recoverpassword.component';
@@ -108,7 +107,7 @@ import { SinglepostComponent } from './singlepost/singlepost.component';
     NgbModule, NgImageSliderModule, AngularFireAuthModule, HttpClientModule
    
   ],
-  providers: [NewsService,AngularFireAuth],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

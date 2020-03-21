@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {FormGroup, FormBuilder,FormControl, Validators} from '@angular/forms'
+import {FormGroup, FormBuilder,FormControl, Validators} from '@angular/forms';
 import { PostdataService } from '../sevice/postdata.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 

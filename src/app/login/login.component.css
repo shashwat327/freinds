@@ -25,6 +25,7 @@ color:white !important;
 padding-top: 0 !important;
 border-bottom: 1px solid white !important;
 top:0 !important;
+font-size: 18px;
 }
 mat-datepicker-toggle{
 z-index: 5;
@@ -58,6 +59,7 @@ mat-datepicker{
 
 ::ng-deep .mat-form-field-label{
   color:white !important;
+  font-size: 18px;
 }
 /*==================== Welcome page ==================*/
 

@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import {FormGroup, FormBuilder,FormControl, Validators} from '@angular/forms';
+import { HomepostService } from '../sevice/homepost.service';
 
 
 
@@ -10,18 +12,38 @@ import { Router } from '@angular/router';
 })
 export class HomepageComponent implements OnInit {
 
+  HomePostform:FormGroup;
   subMenuState:boolean ;
   display: boolean =true;
   ReplyBoxShow:boolean=false;
   ShowReply:boolean=false;
 
   constructor(    private router: Router,
+                  private formBuilder:FormBuilder,
+                  private homepostservice: HomepostService
                   ){
                     document.body.style.background = '#f1f1f1';
                   }
     
-  ngOnInit() {}
+  ngOnInit() {
+    this.HomePostform= this.formBuilder.group({
+
+      postdata: new FormControl("",Validators.required),
+      
+      });
+  }
     
+  HomePostSubmitForm(value){    
+    var json1={  postdata:value.postdata}
+
+           this.homepostservice.homepostData(json1)
+           .subscribe(data=> {
+                                 
+                                  console.log(data)
+                             }
+                      );
+}
+
   
   burgerClicked(evnt){
     this.subMenuState = evnt;
@@ -44,5 +66,6 @@ export class HomepageComponent implements OnInit {
    this.ShowReply = true;
    this.ReplyBoxShow = false;
  }
+
   }
 

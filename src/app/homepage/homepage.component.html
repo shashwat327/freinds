@@ -426,16 +426,17 @@
 
 				<div class="panel">
 
-					<form >
+					<form [formGroup]="HomePostform" (ngSubmit)="HomePostSubmitform(HomePostform.value)">
 
-						<textarea placeholder="Whats in your mind today?" rows="4"
+						<textarea [formControlName]="'postdata'" name="postdata"
+						 placeholder="Whats in your mind today?" rows="4"
 							class="form-control input-lg p-text-area"></textarea>
 
-					</form>
+					
 
 					<div class="panel-footer">
 
-						<button class="btn btn-info pull-right">Post</button>
+						<button type="submit" class="btn btn-info pull-right">Post</button>
 
 						<ul class="nav nav-pills">
 
@@ -446,7 +447,7 @@
 
 							<li>
 
-								<a ><i style="color:green; " class="fa fa-camera" (click)="location.click()"  ></i></a>
+								<a ><i style="color:green; " class="fa fa-camera" (click)="photo.click()"  ></i></a>
 								<input  #photo  name="imgUpload"  (change)="fileChangeEvent($event)"  type="file" style="display: none;" >
 		
 
@@ -463,7 +464,7 @@
 						</ul>
 
 					</div>
-
+				</form>
 				</div>
 
 				<!-- first post-->
@@ -493,7 +494,7 @@
 						</div>
 						
 					</div>
-
+					<p>This is a short description</p>
 					<div class="post-image">
 
 						<img src="assets/img/game.jpg" class="image show-in-modal" alt="image post">
@@ -502,7 +503,7 @@
 
 					<div class="post-description">
 
-						<p>This is a short description</p>
+						<!-- <p>This is a short description</p> -->
 
 						<div class="stats">
 
