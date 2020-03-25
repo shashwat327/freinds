@@ -426,17 +426,16 @@
 
 				<div class="panel">
 
-					<form [formGroup]="HomePostform" (ngSubmit)="HomePostSubmitform(HomePostform.value)">
+					<form [formGroup]="HomePostform" (ngSubmit)="Submitform(HomePostform.value)" >
 
 						<textarea [formControlName]="'postdata'" name="postdata"
 						 placeholder="Whats in your mind today?" rows="4"
 							class="form-control input-lg p-text-area"></textarea>
 
 					
+					    <div class="panel-footer">
 
-					<div class="panel-footer">
-
-						<button type="submit" class="btn btn-info pull-right">Post</button>
+						
 
 						<ul class="nav nav-pills">
 
@@ -448,7 +447,7 @@
 							<li>
 
 								<a ><i style="color:green; " class="fa fa-camera" (click)="photo.click()"  ></i></a>
-								<input  #photo  name="imgUpload"  (change)="fileChangeEvent($event)"  type="file" style="display: none;" >
+								<input  #photo [formControlName]="'imgUpload'"   name="imgUpload"  (change)="fileChangeEvent($event)"  type="file" style="display: none;" >
 		
 
 							</li>
@@ -462,8 +461,11 @@
 
 
 						</ul>
+						
+						<button type="submit" class="btn btn-info pull-right">Post</button>
 
-					</div>
+					    </div>
+					
 				</form>
 				</div>
 

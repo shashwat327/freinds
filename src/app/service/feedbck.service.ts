@@ -4,14 +4,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class HomepostService {
+export class FeedbckService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient ) { }
 
-  homepostData(data){
-    // console.log("data in homepage ")
+  postFeedbackData(data){
+    console.log("data inside ")
     return this.http.post<any>("https://jsonplaceholder.typicode.com/posts", data
     );
-  };
-
+  }
 }

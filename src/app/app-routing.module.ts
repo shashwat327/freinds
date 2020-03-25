@@ -25,6 +25,9 @@ import { FreindprofileComponent } from './freindprofile/freindprofile.component'
 import { StrangerprofileComponent } from './strangerprofile/strangerprofile.component';
 import { SettingComponent } from './setting/setting.component';
 import { SinglepostComponent } from './singlepost/singlepost.component';
+import { TermsComponent } from './terms/terms.component';
+import { PolicyComponent } from './policy/policy.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 const routes: Routes = [
@@ -179,6 +182,25 @@ const routes: Routes = [
     component: SinglepostComponent,
     children: []
   },
+  {
+    path: 'terms',
+    pathMatch: 'full',
+    component: TermsComponent,
+    children: []
+  },
+  {
+    path: 'policy',
+    pathMatch: 'full',
+    component: PolicyComponent,
+    children: []
+  },
+  {
+    path: 'feedback',
+    pathMatch: 'full',
+    component: FeedbackComponent,
+    children: []
+  },
+ 
  
   
  

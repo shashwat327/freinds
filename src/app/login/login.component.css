@@ -131,10 +131,12 @@ height: 50px;
 
 .login-page .footer-links a{
 color: #fff;
+
 }
 
 .login-page .footer-links a:hover{
 color:#000;
+cursor: pointer;
 }
 
 .login-page .input-lg {

@@ -103,5 +103,14 @@ export class LoginComponent implements OnInit {
   gotoHomepage(){
      this.router.navigate(['homepage']);
   }
+  gotoTerms(){
+    this.router.navigate(['terms']);
+  }
+  gotoPolicy(){
+    this.router.navigate(['policy']);
+  }
+  gotoFeedback(){
+    this.router.navigate(['feedback']);
+  }
 
 }

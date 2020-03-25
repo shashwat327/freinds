@@ -17,6 +17,8 @@ export class HomepageComponent implements OnInit {
   display: boolean =true;
   ReplyBoxShow:boolean=false;
   ShowReply:boolean=false;
+  files=[];
+  fileSize: boolean;
 
   constructor(    private router: Router,
                   private formBuilder:FormBuilder,
@@ -29,12 +31,16 @@ export class HomepageComponent implements OnInit {
     this.HomePostform= this.formBuilder.group({
 
       postdata: new FormControl("",Validators.required),
+      imgUpload: new FormControl("",Validators.required),
       
       });
   }
     
-  HomePostSubmitForm(value){    
-    var json1={  postdata:value.postdata}
+  Submitform(value){    
+    var json1={  
+      postdata:value.postdata,
+      imgUpload:this.files,
+    }
 
            this.homepostservice.homepostData(json1)
            .subscribe(data=> {
@@ -45,12 +51,12 @@ export class HomepageComponent implements OnInit {
 }
 
   
-  burgerClicked(evnt){
-    this.subMenuState = evnt;
-    console.log("inside homepage component with showMenu =", this.subMenuState);
-    this.display=this.subMenuState;
-    console.log("display="+this.display);
-  }
+  // burgerClicked(evnt){
+  //   this.subMenuState = evnt;
+  //   console.log("inside homepage component with showMenu =", this.subMenuState);
+  //   this.display=this.subMenuState;
+  //   console.log("display="+this.display);
+  // }
 
   gotoProfile(){
     this.router.navigate(['profile'])
@@ -67,5 +73,27 @@ export class HomepageComponent implements OnInit {
    this.ReplyBoxShow = false;
  }
 
+ fileChangeEvent(event: any): void {
+  const reader = new FileReader();
+  if (event.target.files && event.target.files.length) {
+    const [file] = event.target.files;
+    // this.files = event.target.files;
+    for (let index = 0; index < event.target.files.length; index++) {
+      let temp = event.target.files[index].name.split(".");
+      let temptype = temp[temp.length - 1];
+
+      event.target.files[index].customType = temptype;
+      let b = event.target.files[index].size <= 1024 * 1024 * 5; //5242880 bytes = 5MB
+      if (b == false) {
+        this.fileSize = true;
+        console.log("if");
+      } else {
+        this.files.push(event.target.files[index]);
+        
+      }
+      console.log(this.files);
+    }
+  } 
+ }
   }
 
