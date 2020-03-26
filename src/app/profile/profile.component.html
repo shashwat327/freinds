@@ -327,49 +327,50 @@
   
   </div>
   
-      <div class="panel">
-  
-        <form>
-  
-            <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
-  
-        </form>
-  
+  <div class="panel">
+
+    <form [formGroup]="HomePostform" (ngSubmit)="Submitform(HomePostform.value)"  >
+
+        <textarea [formControlName]="'postdata'" name="postdata"
+         placeholder="Whats in your mind today?" rows="6"
+            class="form-control input-lg p-text-area"></textarea>
+
+    
         <div class="panel-footer">
-  
-            <button class="btn btn-info pull-right">Post</button>
-  
-            <ul class="nav nav-pills">
-  
-                <li>
-  
-                    <a href="https://www.bootdey.com/template_demo/clean-note/profile.html#"><i class="fa fa-map-marker"></i></a>
-  
-                </li>
-  
-                <li>
-  
-                    <a href="https://www.bootdey.com/template_demo/clean-note/profile.html#"><i class="fa fa-camera"></i></a>
-  
-                </li>
-  
-                <li>
-  
-                    <a href="https://www.bootdey.com/template_demo/clean-note/profile.html#"><i class=" fa fa-film"></i></a>
-  
-                </li>
-  
-                <li>
-  
-                    <a href="https://www.bootdey.com/template_demo/clean-note/profile.html#"><i class="fa fa-microphone"></i></a>
-  
-                </li>
-  
-            </ul>
-  
+
+        
+
+        <ul class="nav nav-pills">
+
+            <li>
+
+                <a  ><i style="color: red; " class="fa fa-map-marker"></i> </a>
+                                </li>
+
+            <li>
+
+                <a ><i style="color:green; " class="fa fa-camera" (click)="photo.click()"  ></i></a>
+                <input  #photo  [formControlName]="'imgUpload'"   name="imgUpload"  (change)="fileChangeEvent($event)"  type="file" style="display: none;" >
+
+
+            </li>
+
+            <li>
+
+                <a><i style="color:black; border-right:none; background-color: yellow; border-radius: 50px;"
+                        class="fa fa-smile-o"> </i></a>
+
+            </li>
+
+            <button type="submit" class="btn btn-info pull-right">Post</button>
+        </ul>
+        
+        
+
         </div>
-  
-      </div>
+    
+    </form>
+</div>
   
           <!-- first post-->
   

@@ -335,10 +335,18 @@
 
 
 /* =============  add post form =====================*/
+.profile-info .panel-footer{
+  background-color: white;
+  padding: 10px 15px 0px;
+}
 .profile-info .panel-footer ul li a {
     color: #7a7a7a;
+    border-right: 1px solid #edeaea;
+    border-radius: 0 !important;
 }
-
+.profile-info .panel-footer ul li a i{
+  font-size: 22px;
+}
 .form-control.p-text-area, .form-control.p-text-area:focus {
     border: 0px solid #fff;
     font-weight: 300;
@@ -347,6 +355,7 @@
     font-size: 16px;
     resize:vertical ;
 }
+
 
 /*======================== Timeline post ====================*/
 .panel-white {
